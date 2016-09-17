@@ -1,6 +1,5 @@
 'use strict';
 
-let moment = require('moment');
 let messageTextConstants = require('./message-text.constants');
 let isItCloudy = require('./is-it-cloudy.service');
 

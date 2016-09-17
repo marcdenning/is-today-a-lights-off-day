@@ -1,6 +1,8 @@
 'use strict';
 
-let moment = require('moment');
+const TZ = process.env.TIMEZONE || 'America/New_York';
+
+let moment = require('moment-timezone');
 let messageTextConstants = require('./message-text.constants');
 let isItALightsOffDay = require('./answer.service');
 
@@ -8,10 +10,10 @@ function rootPage(req, res) {
   let date;
 
   if (req.query.date) {
-    date = moment(req.query.date, 'YYYYMMDD').toDate();
+    date = moment.tz(req.query.date, 'YYYYMMDD', TZ).toDate();
   }
   else {
-    date = new Date();
+    date = moment.tz(TZ).toDate();
   }
   date.setHours(0, 0, 0, 0);
 
