@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Marc Denning -- Developer -- @marc_denning
+
+# TECHNOLOGY COLOPHON
+
+    HTML, CSS
+    NodeJS
+    Microsoft Azure
