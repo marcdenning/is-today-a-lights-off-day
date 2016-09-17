@@ -4,6 +4,56 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.root-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: 2em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.lights-on {
+  background: #fff;
+  color: #222;
+}
+
+.lights-on a,
+.lights-on a:link,
+.lights-on a:active {
+  color: #06f;
+}
+
+.lights-off {
+  background: #222;
+  color: #fff;
+}
+
+.lights-off a,
+.lights-off a:link,
+.lights-off a:active {
+  color: #39f;
+}
+
+a:visited {
+  color: #93f;
 }
 
 /* ==========================================================================
