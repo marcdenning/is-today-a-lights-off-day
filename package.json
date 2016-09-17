@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "watch": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,9 +24,14 @@
   },
   "homepage": "https://github.com/kenobi883/is-today-a-lights-off-day#readme",
   "dependencies": {
+    "axios": "^0.14.0",
     "consolidate": "^0.14.1",
     "debug": "^2.2.0",
     "express": "^4.14.0",
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "moment": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
