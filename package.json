@@ -24,6 +24,7 @@
   "homepage": "https://github.com/kenobi883/is-today-a-lights-off-day#readme",
   "dependencies": {
     "consolidate": "^0.14.1",
+    "debug": "^2.2.0",
     "express": "^4.14.0",
     "handlebars": "^4.0.5"
   }

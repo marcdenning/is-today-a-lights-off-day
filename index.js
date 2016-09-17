@@ -1,10 +1,16 @@
 'use strict';
 
-var express = require('express');
-var consolidate = require('consolidate');
-var isTodayALightsOffDay = require('./src/answer')
-var app = express();
-var port = process.env.PORT || 3000;
+let debug = require('debug')('is-today-a-lights-off-day');
+let express = require('express');
+let consolidate = require('consolidate');
+
+let isTodayALightsOffDay = require('./src/answer')
+
+const PORT = process.env.PORT || 3000;
+
+let app = express();
+
+debug('Setting up is-today-a-lights-off-day.');
 
 app.engine('hbs', consolidate.handlebars);
 
@@ -26,4 +32,4 @@ app.use(express.static(__dirname + '/public'));
 
 app.use((req, res) => res.status(404).render('404'))
 
-app.listen(port, () => console.log(`Listining on port ${port}.`));
+app.listen(PORT, () => debug('Listining on port %s.', PORT));
