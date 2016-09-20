@@ -3,8 +3,8 @@
 let messageTextConstants = require('./message-text.constants');
 let isItCloudy = require('./is-it-cloudy.service');
 
-const LAT = process.env.FORECAST_LATITUDE || 35.8815;
-const LONG = process.env.FORECAST_LONGITUDE || -78.8460;
+const LAT = process.env.DARKSKY_LATITUDE || 35.8815;
+const LONG = process.env.DARKSKY_LONGITUDE || -78.8460;
 const FRIDAY = 5;
 
 function isTodayALightsOffDay(date) {

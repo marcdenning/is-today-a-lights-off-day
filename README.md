@@ -7,7 +7,7 @@ This simple Node app runs an Express server to provide an answer to the question
 The logic is as follows:
 
 1. If today is a Friday, the answer is "Yes."
-  * **Unless** it is too dark outside (as determined by [Forecast.io](http://forecast.io)), then
+  * **Unless** it is too dark outside (as determined by [Dark Sky](https://darksky.net)), then
     the answer is "Maybe, but it looks kinda cloudy. You should consult your co-workers."
 1. Otherwise, the answer is "No."
 
@@ -23,10 +23,10 @@ http://localhost:3000/?date=20160916
 
 The app utilizes a few environment variables to adjust its behavior:
 
-* `FORECAST_API_KEY` (*required*) - the API key you obtain from the
-  [Forecast Developer Center](https://developer.forecast.io/).
-* `FORECAST_LATITUDE` (*optional*) - your desired latitude to apply to the Forecast API query.
-* `FORECAST_LONGITUDE` (*optional*) - your desired longitude to apply to the Forecast API query.
+* `DARKSKY_API_KEY` (*required*) - the API key you obtain from the
+  [Dark Sky Developer Center](https://darksky.net/dev/).
+* `DARKSKY_LATITUDE` (*optional*) - your desired latitude to apply to the Dark Sky API query.
+* `DARKSKY_LONGITUDE` (*optional*) - your desired longitude to apply to the Dark Sky API query.
 * `TIMEZONE` (*optional*) - your desired time zone for understanding and manipulating dates.
 * `PORT` (*optional*) - a port the app should listen to.
 
