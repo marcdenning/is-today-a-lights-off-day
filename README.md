@@ -33,6 +33,3 @@ npm run watch
 ```
 
 Open your browser to [http://localhost:3000/](http://localhost:3000/) to view the app.
-
-lhyt rb  ellergftiku
-Ellery
