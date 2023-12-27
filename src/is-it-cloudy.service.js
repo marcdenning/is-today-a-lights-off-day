@@ -1,9 +1,8 @@
-'use strict';
+import debugFactory from 'debug';
+const debug = debugFactory('is-it-cloudy');
+import axios from 'axios';
 
-const debug = require('debug')('is-it-cloudy');
-const axios = require('axios');
-
-function cloudyFactory(WEATHER_API_KEY, MIN_CLOUD_COVER = 40) {
+export default function cloudyFactory(WEATHER_API_KEY, MIN_CLOUD_COVER = 40) {
   return function isItCloudy(latitude, longitude) {
     const url = 'https://api.openweathermap.org/data/2.5/weather';
 
@@ -25,5 +24,3 @@ function cloudyFactory(WEATHER_API_KEY, MIN_CLOUD_COVER = 40) {
       });
   };
 }
-
-module.exports = cloudyFactory;

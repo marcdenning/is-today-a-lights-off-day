@@ -1,8 +1,6 @@
-'use strict';
+import { NO } from './message-text.constants.js';
 
-let messageTextConstants = require('./message-text.constants');
-
-function rootPageFactory(isItALightsOffDay) {
+export default function rootPageFactory(isItALightsOffDay) {
   return function rootPage(req, res) {
     const date = new Date();
 
@@ -10,7 +8,7 @@ function rootPageFactory(isItALightsOffDay) {
 
     isItALightsOffDay(date)
       .then((messageText) => {
-        let answer = messageText !== messageTextConstants.NO;
+        let answer = messageText !== NO;
 
         res.render('index', {
           title: 'Is Today a Lights-Off Day?',
@@ -21,5 +19,3 @@ function rootPageFactory(isItALightsOffDay) {
       });
   };
 }
-
-module.exports = rootPageFactory;

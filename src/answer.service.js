@@ -1,21 +1,17 @@
-'use strict';
-
-let messageTextConstants = require('./message-text.constants');
+import { YES, NO, MAYBE } from './message-text.constants.js';
 
 const FRIDAY = 5;
 
-function answerFactory(LAT, LONG, isItCloudy) {
+export default function answerFactory(LAT, LONG, isItCloudy) {
   return function isItALightsOffDay(date) {
     let isFriday = date.getDay() === FRIDAY;
 
     return isItCloudy(LAT, LONG)
       .then((isCloudy) => {
         if (isCloudy && isFriday) {
-          return messageTextConstants.MAYBE;
+          return MAYBE;
         }
-        return isFriday ? messageTextConstants.YES : messageTextConstants.NO;
+        return isFriday ? YES : NO;
       });
   };
 }
-
-module.exports = answerFactory;
