@@ -20,7 +20,7 @@ The app utilizes a few environment variables to adjust its behavior:
 * `WEATHER_API_KEY` (*required*) - the API key you obtain from [OpenWeather](https://openweathermap.org/api).
 * `LATITUDE` (*optional*) - your desired latitude to apply to the OpenWeather API query.
 * `LONGITUDE` (*optional*) - your desired longitude to apply to the OpenWeather API query.
-* `TIMEZONE` (*optional*) - your desired time zone for understanding and manipulating dates.
+* `TZ` (*optional*) - your desired time zone for understanding and manipulating dates.
 * `PORT` (*optional*) - a port the app should listen to.
 
 ### Getting Started

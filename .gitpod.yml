@@ -5,6 +5,8 @@
 tasks:
   - init: npm install
     command: npm run start
+    env:
+      TZ: America/New_York
 ports:
   - port: 3000
     onOpen: notify

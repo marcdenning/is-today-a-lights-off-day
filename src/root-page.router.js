@@ -1,13 +1,10 @@
 'use strict';
 
-const TZ = process.env.TIMEZONE || 'America/New_York';
-
-let moment = require('moment-timezone');
 let messageTextConstants = require('./message-text.constants');
 
 function rootPageFactory(isItALightsOffDay) {
   return function rootPage(req, res) {
-    const date = moment.tz(TZ).toDate();
+    const date = new Date();
 
     date.setHours(0, 0, 0, 0);
 

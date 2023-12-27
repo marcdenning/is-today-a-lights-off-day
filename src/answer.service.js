@@ -5,7 +5,7 @@ let messageTextConstants = require('./message-text.constants');
 const FRIDAY = 5;
 
 function answerFactory(LAT, LONG, isItCloudy) {
-  return function isTodayALightsOffDay(date) {
+  return function isItALightsOffDay(date) {
     let isFriday = date.getDay() === FRIDAY;
 
     return isItCloudy(LAT, LONG)
