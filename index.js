@@ -8,7 +8,7 @@ const LONG = process.env.LONGITUDE || -78.8460;
 
 const debug = require('debug')(APP_NAME);
 const express = require('express');
-const consolidate = require('consolidate');
+const consolidate = require('@ladjs/consolidate');
 
 if (!WEATHER_API_KEY) {
   debug('Environment variable WEATHER_API_KEY is not set. Please set a value.');
