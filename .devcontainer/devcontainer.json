@@ -1,0 +1,21 @@
+{
+  "name": "is-today-a-lights-off-day",
+  "image": "mcr.microsoft.com/devcontainers/base:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "remoteUser": "gitpod",
+  "containerUser": "gitpod",
+  "workspaceFolder": "/workspace/is-today-a-lights-off-day",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/is-today-a-lights-off-day,type=bind",
+  "forwardPorts": [
+    3000
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Port 3000",
+      "onAutoForward": "notify",
+      "elevateIfNeeded": true
+    }
+  }
+}
