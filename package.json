@@ -28,7 +28,7 @@
     "@ladjs/consolidate": "^1.0.4",
     "axios": "^1.18.0",
     "debug": "^4.3.7",
-    "express": "^4.22.2",
+    "express": "^4.22.3",
     "handlebars": "^4.7.9"
   },
   "devDependencies": {
